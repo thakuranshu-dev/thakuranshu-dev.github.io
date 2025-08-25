@@ -31,7 +31,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 70px;
+    height: 50px;
     width: 100%;
     padding: 0 3rem ;
     background: rgba(0, 0, 0, 0.3);
@@ -79,9 +79,9 @@ body {
     
 }
 section {
-    min-height: 100vh;
+    /* height: 100vh; */
     width: 100%;
-    padding: 5rem 12% 10rem;
+    padding: 5rem 8% 10rem;
 }
 
 .home {
@@ -104,58 +104,69 @@ section {
 span:not(.bio-para) {
     color: var(--main-color);
 }
-
 .logo span{
     color: var(--main-color);
 }
-
 .home-content h3{
     margin-bottom: 2rem;
     margin-top: 1rem;
     font-size: 1.8rem;
 }
-
 .home-content h1{
     font-size: 3.5rem;
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
 }
-
 .home-img {
     border-radius: 50%;
-    width: 500px;
-    height: 500px;
+    width: 460px;
+    height: 460px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .home-img img{
-    background-color: var(--main-color);
-    width: 500px;
-    height: 500px;
+    /* background-color: var(--main-color); */
+    width: 460px;
+    height: 460px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
+    /* box-shadow: 0 0 25px var(--main-color); */
+    
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
-
 .home-img img:hover{
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color),
                 0 0 100px var(--main-color);
 }
-
+.home-img::after{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 20px 40px var(--bg-color),
+                inset 0px 0px 20px 40px var(--bg-color),
+                0px 0px 10px 40px var(--bg-color),
+                0px 0px 10px 40px var(--bg-color);
+}
 .home-content p{
     font-size: 1.12rem;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.4;
     letter-spacing: 0.01em;
-    max-width: 1000px;
+    max-width: 800px;
+}
+.bio-para{
+    display: none;
+}
+.bio-para.show{
+    display: block;
 }
 .social-icons{
     width: 40vw;
@@ -458,6 +469,10 @@ span:not(.bio-para) {
     font-weight: 500;
     color: var(--muted-color);
 }
+.lang-exp:hover, .framework-libs:hover, .tech-skills:hover{
+    scale: 101%;
+    transition: all 0.3s ease-in-out;
+}
 progress {
     width: 100%;
     border-radius: 20px;
@@ -488,9 +503,15 @@ progress::-ms-fill {
     border-radius: 20px;
     appearance: none;
 }
+.skills:hover{
+    box-shadow: 0 0 10px var(--main-color);
+    scale: 101%;
+    transition: all 0.3s ease-in-out;
+}
+
 .arsenal .lang-exp .skills, .framework-libs .skills, .tech-skills .skills{
     width: 100%;
-    height: 15px;
+    height: 12px;
     border-radius: 20px;
     background-color: var(--bg-color);
     margin-bottom: 0.5rem;
@@ -602,7 +623,6 @@ section#contact{
     display: flex;
     overflow: hidden;
     border-radius: 2rem;
-    cursor: grab;
     position: relative;
     box-shadow: 
         0 0 6px #00000010,
@@ -741,6 +761,9 @@ textarea{
     bottom: -180px;
     height: 400px;
     width: 400px;
+}
+.shape:hover{
+    scale: 1.1;
 }
 footer { 
     width: 100%; height: fit-content;
