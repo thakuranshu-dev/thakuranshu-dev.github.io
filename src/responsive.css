@@ -78,8 +78,9 @@
         box-shadow: 0 0 0px var(--bg-color);
     }   
     .home-img::after{
-        content: "";
+        opacity: 0;
         display: none;
+        visibility: hidden;
     }
     .home-content {
         align-items: start;
