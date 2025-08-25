@@ -193,14 +193,14 @@
         width: 350px;
     }
     #contact h2{
-        transform: translateY(-50px);
+        transform: translateY(20px);
     }   
     .background {
         width: 400px;
     }
     .shape:first-child{
         left: -120px;
-        top: 40px;
+        top: 70px;
         height: 200px;
         width: 200px;
     }
