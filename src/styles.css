@@ -614,12 +614,13 @@ section#contact{
     flex-direction: column;
     gap: 3rem;
     position: relative;
+    height: fit-content;
 }
 #contact h2{
     transform: translateY(-100px);
 }
 #contact .wrapper{
-    width: 800px;
+    width: 800px; height: 90%;
     display: flex;
     overflow: hidden;
     border-radius: 2rem;
@@ -677,7 +678,7 @@ section#contact{
     border-radius: 2rem;
 }
 form#contact-form{
-    height: 520px;
+    height: 500px;
     width: 600px;
     z-index: 300;
     display: flex;
