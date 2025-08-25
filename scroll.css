@@ -1,0 +1,14 @@
+::-webkit-scrollbar{
+    opacity: 1;
+    width: 15px;
+    color: var(--main-color);
+}
+
+::-webkit-slider-thumb{
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track{
+    /* background-color: var(--bg-color); */
+    width: 50px;
+}

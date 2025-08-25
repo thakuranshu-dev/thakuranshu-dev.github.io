@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Anshu Kumar Thakur's Portfolio showcasing skills, projects, and contact information.">
+    <meta keywords="Portfolio, Web Developer, Android Developer, Full Stack Developer, Anshu Kumar Thakur, Projects, Skills, Personal Website">
+    <title>Portfolio | Anshu Kumar Thakur</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="resp.css">
+    <link rel="stylesheet" href="animate.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo" rel="noopener"noreferrer>Anshu
+            <span>Thakur</span>
+        </a>
+
+        <nav class="navbar" id="default-nav">
+            <a href="#home" class="nav-link active" rel="noopener noreferrer">Home</a>
+            <a href="#education" class="nav-link " rel="noopener noreferrer">Education</a>
+            <a href="#projects" class="nav-link " rel="noopener noreferrer">Projects</a>
+            <a href="#contact" class="nav-link" rel="noopener noreferrer">Contact</a>
+        </nav>
+
+        <div class="hamburger-icon" id="hamburger-icon">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <nav class="navbar nav-sec">
+                <a href="#home" class="nav-link active" rel="noopener noreferrer">Home</a>
+                <a href="#education" class="nav-link " rel="noopener noreferrer">Education</a>
+                <a href="#projects" class="nav-link " rel="noopener noreferrer">Projects</a>
+                <a href="#contact" class="nav-link" rel="noopener noreferrer">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, It's <span>Anshu</span></h1>
+            <h3 class="text-animation">I'm a <span></span></h3>
+            <p><span class="bio-para show"> with a strong enthusiasm for building scalable, efficient, and user-friendly web applications and Android apps. With a solid foundation in both front-end and back-end development, I excel at crafting seamless user experiences and robust server-side logic. <br><br></span>
+
+            <span class="bio-para"> Proficient in a range of technologies, including HTML, CSS, JavaScript, C/C++, Java, Python, PHP, SQL, React.js, Node.js, Flask, Django, Streamlit, Tailwind, Bootstrap, MongoDB, etc. I'm always eager to explore new tools and frameworks. My goal is to deliver high-quality solutions that meet and exceed client expectations. <br><br></span>
+
+            <span class="bio-para">When I'm not coding, you can find me listening to music or exploring new technologies online. I'm excited to collaborate with innovative teams and individuals to bring their vision to life. Let's build something amazing together! </span> </p>
+
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/anshu-kumar-thakur-2bb8a325b" target="_blank" rel="noopener noreferrer"><img src="./assets/linkedin_icn.png" alt="LinkedIn"></a>
+                <a href="https://guthub.com/thakuranshu-dev" target="_blank" rel="noopener noreferrer"><img src="./assets/github_icn.png" alt="GitHub"></a>
+                <a href="mailto:thakuranshu.art@gmail.com" target="_blank" rel="noopener noreferrer"><img src="./assets/email_icn.png" alt="E-mail"></a>
+                <!-- <a href="#" rel="noopener noreferrer"><img src="./assets/instagram_icn.png" alt="Instagram"></a> -->
+            </div>
+
+            <div class="btn-group">
+                <a href="#" class="btn" rel="noopener noreferrer">Hire me</a>
+                <a href="#contact" class="btn" rel="noopener noreferrer">Contact</a>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <img src="./assets/Profile_Image.jpg" alt="Anshu Kumar Thakur Profile Photo" oncontextmenu="return false;" draggable="false" id="profile">
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="heading-edu section-lbl" >Education</h2>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2020</div>
+            <div class="timeline-content">
+                <h3>Class 10 <sup>th</sup> | BSEB</h3>
+                <p>U.H.School VidyaJhanp, Muraul, Muzaffarpur</p>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2022</div>
+            <div class="timeline-content">
+                <h3>Class 12 <sup>th</sup> | BSEB</h3>
+                <p>Muraul High School, Muraul, Muzaffarpur</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+                <h3>BCA | BRABU</h3>
+                <p>Dr. Ram Manohar Lohiya Smarak College, Muzaffarpur</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Today</div>
+            <div class="timeline-content">
+                <h3>Open to Job | Contract</h3>
+                <p>Currently open to freelancing opportunities, bringing a strong understanding of modern development practices and a dedication to delivering high-quality results.</p>
+            </div>
+        </div>
+
+        <h2 class="heading-arsenal section-lbl">My Arsenal</h2>
+        <div class="arsenal" id="arsenal">
+            <div class="lang-exp" >
+                <h3 class="block-name">Language Experties</h3>
+
+                <span class="label">HTML</span>
+                <progress value="99" max="100" class="skills html"></progress>
+                
+                <span class="label">CSS</span>
+                <progress value="90" max="100" class="skills css"></progress>
+                
+                <span class="label">JavaScript</span>
+                <progress value="75" max="100" class="skills js"></progress>
+
+                <span class="label">PHP</span>
+                <progress value="70" max="100" class="skills php"></progress>
+                
+                <span class="label">C/C++</span>
+                <progress value="80" max="100" class="skills c-cpp"></progress>
+
+                <span class="label">Java</span>
+                <progress value="90" max="100" class="skills java"></progress>
+                
+                <span class="label">Python</span>
+                <progress value="90" max="100" class="skills python"></progress>
+                
+                <span class="label">SQL & PLSQL</span>
+                <progress value="95" max="100" class="skills sql/plsql"></progress>
+            </div>
+            
+            <div class="tech-skills">
+                <h3 class="block-name">Tech Skills</h3>
+                
+                <span class="label">FullStack Development</span>
+                <progress value="80" max="100" class="skills fullstack"></progress>
+
+                <span class="label">Frontend Development</span>
+                <progress value="80" max="100" class="skills frontend"></progress>
+
+                <span class="label">Backend Development</span>
+                <progress value="75" max="100" class="skills backend"></progress>
+
+                <span class="label">Database Management</span>
+                <progress value="70" max="100" class="skills database"></progress>
+
+                <span class="label">API Development</span>
+                <progress value="75" max="100" class="skills api"></progress>
+
+                <span class="label">Version Control (Git)</span>
+                <progress value="85" max="100" class="skills git"></progress>
+
+                <span class="label">Android App Development</span>
+                <progress value="70" max="100" class="skills android"></progress>
+
+                <span class="label">Desktop App Development</span>
+                <progress value="65" max="100" class="skills desktop"></progress>
+            </div>
+            
+            <div class="framework-libs">
+                <h3 class="block-name">Framework & Libraries</h3>
+                
+                <span class="label">React.js</span>
+                <progress value="80" max="100" class="skills react"></progress>
+                
+                <span class="label">Node.js</span>
+                <progress value="75" max="100" class="skills nodejs"></progress>
+                
+                <span class="label">Django (Python)</span>
+                <progress value="80" max="100" class="skills django"></progress>
+                
+                <span class="label">Flask (Python)</span>
+                <progress value="95" max="100" class="skills flask"></progress>
+
+                <span class="label">Streamlit (Python)</span>
+                <progress value="70" max="100" class="skills streamlit"></progress>
+
+                <span class="label">Bootstrap (CSS)</span>
+                <progress value="85" max="100" class="skills bootstrap"></progress>
+
+                <span class="label">Tailwind (CSS)</span>
+                <progress value="80" max="100" class="skills tailwind"></progress>
+
+                <span class="label">jQuery (JS)</span>
+                <progress value="70" max="100" class="skills jquery"></progress>
+
+                <span class="label">Larvel (PHP)</span>
+                <progress value="65" max="100" class="skills laravel"></progress>
+            </div>            
+        </div>  
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="section-lbl">Projects</h2>
+        <div class="project-list" id="project-list">
+            <div class="project-item">
+                <img src="./assets/ss/markdown_editor.jpg" alt="Markdown Editor" class="project-preview" loading="lazy">
+                <h3>Markdown Editor</h3>
+                <p>Description of project 1.</p>
+                <a href="https://markdown-docs-editor.netlify.app/" class="visit-project btn" rel="noopener noreferrer" target="_blank">View Project</a>
+            </div>
+            <div class="project-item">
+                <img src="./assets//ss/stock_dashboard.jpg" alt="Stock Dashboard" class="project-preview" loading="lazy" label="Click to view image">
+                <h3>Stock Dashboard</h3>
+                <p>Description of project 2.</p>
+                <a href="https://stock-dashboard-0dbl.onrender.com/" class="visit-project btn" rel="noopener noreferrer" target="_blank">View Project</a>
+            </div>
+            <div class="project-item">
+                <img src="./assets/ss/portfolio_builder.png" alt="Portfolio Builderr" class="project-preview" loading="lazy" aria-label="Click to view image">
+                <h3>Portfolio Builderr</h3>
+                <p>Description of project 3.</p>
+                <a href="#" class="visit-project btn" rel="noopener noreferrer" target="_blank">View Project</a>
+            </div>
+            <div class="project-item">
+                <img src="./assets/ss/productivity_hub.png" alt="Productivity Hub" class="project-preview" loading="lazy" aria-label="Click to view image" >
+                <h3>Productivity Hub</h3>
+                <p>Description of project 4.</p>
+                <a href="https://productivity-hub-me.netlify.app/" class="visit-project btn" rel="noopener noreferrer" target="_blank">View Project</a>
+            </div>
+            <div class="project-item">
+                <img src="./assets/ss/tic_tac_toe.jpg" alt="Tic Tac Toe Game" class="project-preview" loading="lazy" aria-label="Click to view image" >
+                <h3>Tic-Tac-Toe The | Ultimate Edition</h3>
+                <p>Description of project 5.</p>
+                <a href="#" class="visit-project btn" rel="noopener noreferrer" target="_blank">View Project</a>
+            </div>
+            <div class="project-item">
+                <img src="./assets/ss/3d_product_page.png" alt="3D Product Page" class="project-preview" loading="lazy" aria-label="Click to view image" >
+                <h3>3D Product Page</h3>
+                <p>Description of project 6.</p>
+                <a href="https://unique-product-page.netlify.app/" class="visit-project btn" rel="noopener noreferrer" target="_blank">View Project</a>
+            </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="section-lbl">Contact Me</h2>
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="wrapper" id="draggable">
+            <div class="wrapper dock">
+                <div class="effect"></div>
+                <div class="shine"></div>
+                <div class="dock" id="content">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" name="contact-form">
+                        <input type="hidden" name="access_key" value="bbe80296-eecd-48e9-aa39-13ae8cb03ef4" display="none">
+                        <input type="text" name="name" placeholder="Your Name*" required>
+                        <input type="email" name="email" placeholder="Your Email*" required>
+                        <textarea name="message" rows="5" placeholder="Your Message*" required></textarea>
+
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <button type="submit" class="btn submit-btn">Send Message</button>
+                    </form>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Built with ❤️ by Anshu Kumar Thakur<br><br>
+        <a href="https://github.com/thakuranshu-dev" target="_blank" rel="noopener noreferrer">GitHub </a>
+        <a href="https://linkedin.com/in/anshu-kumar-thakur-2bb8a325b" target="_blank" rel="noopener noreferrer">LinkedIn </a>
+        <a href="mailto:thakuranshu.art@gmail.com" target="_blank" rel="noopener noreferrer">E-mail</a>
+        <br>
+        © 2025 Portfolio Builder. All rights reserved.
+    </footer>
+
+        <svg>
+        <filter id="glass-distortion">
+            <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="20" result="turbulence"/>
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="10" />
+        </filter>
+        </svg>
+
+    <!-- Image Preview Modal -->
+    <div class="wrapper image-modal" id="image-modal">
+        <div class="wrapper dock">
+            <div class="effect"></div>
+            <div class="shine"></div>
+            <div class="dock" id="content">
+                <div class="preview-modal" id="preview-modal">
+                    <!-- Image will be displayed here -->
+                    <span class="close-btn" id="close-btn">&times;</span>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <!-- Hire Me form -->
+    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" name="contact-form" style="display: none;">
+        <input type="hidden" name="access_key" value="bbe80296-eecd-48e9-aa39-13ae8cb03ef4" display="none">
+        <input type="text" name="name" placeholder="Your Name*" required>
+        <input type="email" name="email" placeholder="Your Email*" required>
+        <input type="text" name="role" placeholder="My Role*" required>
+        <textarea name="idea" rows="5" placeholder="Describe Your Idea*" required></textarea>
+        
+        <!-- Honeypot Spam Protection -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        <button type="submit" class="btn submit-btn">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
+<!-- TODO: Add hire me - form and change the profile-image -->
