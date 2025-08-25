@@ -1,17 +1,14 @@
-const links = document.querySelectorAll('.nav-link');
-
-function activeLink(){
-    links.forEach((item) =>
-        item.classList.remove('active'));
-
-    this.classList.add('active');
-}
-
-links.forEach((item) =>
-item.addEventListener('click', activeLink));
-
-// mobile nav links
 document.addEventListener('DOMContentLoaded', function() {
+    const homeSkeleton = document.getElementById('home-skeleton');
+    const homeSection = document.querySelector('.home');
+    homeSection.style.display = 'none';
+    homeSkeleton.style.display = 'flex';
+
+    window.addEventListener('load', function() {
+        homeSkeleton.style.display = 'none';
+        homeSection.style.display = 'flex';
+    });
+
     const hamburgerIcon = document.getElementById('hamburger-icon');
     const mobileNav = document.getElementById('mobile-nav');
 
@@ -24,7 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Bio paragraph toggle
+const links = document.querySelectorAll('.nav-link');
+
+function activeLink(){
+    links.forEach((item) =>
+        item.classList.remove('active'));
+
+    this.classList.add('active');
+}
+
+links.forEach((item) =>
+item.addEventListener('click', activeLink));
+
 const bioParagraphs = document.querySelectorAll('.bio-para');
 let randoomIndex = Math.floor(Math.random() * bioParagraphs.length);
 bioParagraphs.forEach((para, index) => {

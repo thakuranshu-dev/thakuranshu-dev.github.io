@@ -27,6 +27,57 @@ body {
     color: var(--text-color);
 }
 
+.home-skeleton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 8rem;
+    width: 100%;
+    padding: 5rem 8% 10rem;
+    background: var(--bg-color);
+}
+.skeleton-content > div,
+.skeleton-img {
+    background: #222;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    animation: skeleton-loading 1.2s infinite linear alternate;
+}
+.skeleton-title { 
+    width: 250px; 
+    height: 40px; 
+}
+.skeleton-subtitle { 
+    width: 180px; 
+    height: 28px; 
+}
+.skeleton-paragraph { 
+    width: 350px; 
+    height: 18px; 
+}
+.skeleton-social { 
+    width: 180px; 
+    height: 40px; 
+}
+.skeleton-btn-group { 
+    width: 160px; 
+    height: 40px; 
+}
+.skeleton-img { 
+    width: 460px; 
+    height: 460px; 
+    border-radius: 50%; 
+}
+@keyframes skeleton-loading {
+    0% { 
+        background-color: #222; 
+    }
+    100% {
+        background-color: #333; 
+    }
+}
+
 .header {
     position: fixed;
     top: 0;
