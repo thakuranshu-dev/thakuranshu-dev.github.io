@@ -77,6 +77,10 @@
     .home-img img:hover{
         box-shadow: 0 0 0px var(--bg-color);
     }   
+    .home-img::after{
+        content: "";
+        display: none;
+    }
     .home-content {
         align-items: start;
         margin-top: 0;
