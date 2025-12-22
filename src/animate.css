@@ -1,98 +1,106 @@
 /* Animate On Scroll */
-@keyframes appear_scaled{
-    from{
-        opacity: 0;
-        scale: 0.5;
-    }
-    to{
-        opacity: 1;
-        scale: 1;
-    }
+@keyframes appear_scaled {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
-@keyframes appear_translated-right{
-    from{
-        opacity: 0;
-        transform: translateX(400px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
-    }
+@keyframes appear_translated-right {
+  from {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
-@keyframes appear_translated-left{
-    from{
-        opacity: 0;
-        transform: translateX(-200px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
-    }
+@keyframes appear_translated-left {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
-@keyframes appear_translated-up{
-    from{
-        opacity: 0;
-        transform: translateY(400px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0px);
-    }
+@keyframes appear_translated-up {
+  from {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
-@keyframes appear_translated-down{
-    from{
-        opacity: 0;
-        transform: translateY(-200px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0px);
-    }
+@keyframes appear_translated-down {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
-@keyframes appear_clip-path-1{
-    from{
-        opacity: 0;
-        clip-path: inset(100% 100% 0 0);
-    }
-    to{
-        opacity: 1;
-        clip-path: inset(0 0 0 0);
-    } 
+@keyframes appear_clip-path-1 {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 100% 0 0);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
 }
 
-@keyframes appear_clip-path-2{
-    from{
-        opacity: 0;
-        clip-path: inset(100% 0 0 100% );
-    }
-    to{
-        opacity: 1;
-        clip-path: inset(0 0 0 0);
-    } 
+@keyframes appear_clip-path-2 {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 0 0 100%);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
 }
 
-@keyframes appear_translated-right2{
-    from{
-        opacity: 0;
-        transform: translateX(400%);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
-    }
+@keyframes appear_translated-right2 {
+  from {
+    opacity: 0;
+    transform: translateX(400%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
-@keyframes animate_opacity{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
+@keyframes animate_opacity {
+  from {
+    opacity: 0;
+  }
 
+  to {
+    opacity: 1;
+  }
+}
