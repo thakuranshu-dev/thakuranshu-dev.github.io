@@ -265,7 +265,7 @@ span:not(.bio-para) {
 
 .btn{
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 0.5rem 2rem;
     background: var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
     border-radius: 4rem;
@@ -855,3 +855,215 @@ footer {
     transform: translate(-50%,-50%) scale(1);
     box-shadow: 0 0 25px var(--main-color);
 }
+
+
+
+.lang-exp {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.block-name {
+    margin-bottom: 15px;
+}
+
+/* Base progress style */
+.lang-exp progress {
+    width: 100%;
+    height: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    appearance: none;
+}
+
+/* Background */
+.lang-exp progress::-webkit-progress-bar {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+}
+
+/* Default value */
+.lang-exp progress::-webkit-progress-value {
+    border-radius: 10px;
+}
+
+/* Firefox */
+.lang-exp progress::-moz-progress-bar {
+    border-radius: 10px;
+}
+
+/* 🌈 Individual Colors */
+progress.html::-webkit-progress-value,
+progress.html::-moz-progress-bar {
+    background: #e44d26; /* HTML */
+}
+
+progress.css::-webkit-progress-value,
+progress.css::-moz-progress-bar {
+    background: #264de4; /* CSS */
+}
+
+progress.js::-webkit-progress-value,
+progress.js::-moz-progress-bar {
+    background: #f7df1e; /* JavaScript */
+}
+
+progress.php::-webkit-progress-value,
+progress.php::-moz-progress-bar {
+    background: #777bb4; /* PHP */
+}
+
+progress.c-cpp::-webkit-progress-value,
+progress.c-cpp::-moz-progress-bar {
+    background: #00599c; /* C/C++ */
+}
+
+progress.java::-webkit-progress-value,
+progress.java::-moz-progress-bar {
+    background: #f89820; /* Java */
+}
+
+progress.python::-webkit-progress-value,
+progress.python::-moz-progress-bar {
+    background: #3776ab; /* Python */
+}
+
+progress.sql-plsql::-webkit-progress-value,
+progress.sql-plsql::-moz-progress-bar {
+    background: #cc2927; /* SQL / PLSQL */
+}
+
+
+
+.tech-skills {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.block-name {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background:
+        conic-gradient(var(--color) calc(var(--value) * 1%), #333333 0);
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--bg-color);
+    border-radius: 50%;
+}
+
+.circle span {
+    font-weight: bold;
+    z-index: 1;
+    color: var(--text-color);
+}
+
+.circle p {
+    font-size: 0.85rem;
+    margin-top: 5px;
+    z-index: 1;
+    color: var(--muted-color);
+}
+
+/* 🎯 Skill Colors */
+.fullstack { --color: #6a5acd; }
+.frontend { --color: #ff6347; }
+.backend   { --color: #20b2aa; }
+.database  { --color: #ffa500; }
+.api       { --color: #3cb371; }
+.git       { --color: #dc143c; }
+.android   { --color: #32cd32; }
+.desktop   { --color: #4682b4; }
+
+.framework-libs {
+    padding: 30px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.block-name {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.pie-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* 🥧 Main Pie Chart */
+.pie-chart {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #61dafb 0% 11.43%,     /* React */
+        #3c873a 11.43% 22.14%,/* Node */
+        #092e20 22.14% 33.57%,/* Django */
+        #000000 33.57% 47.14%,/* Flask */
+        #ff4b4b 47.14% 57.14%,/* Streamlit */
+        #7952b3 57.14% 69.29%,/* Bootstrap */
+        #38bdf8 69.29% 80.72%,/* Tailwind */
+        #0769ad 80.72% 90.72%,/* jQuery */
+        #ff2d20 90.72% 100%   /* Laravel */
+    );
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* 📌 Legend */
+.legend {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.legend span {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* 🎨 Legend Colors */
+.react     { background: #61dafb; }
+.nodejs    { background: #3c873a; }
+.django    { background: #092e20; }
+.flask     { background: #000000; }
+.streamlit { background: #ff4b4b; }
+.bootstrap { background: #7952b3; }
+.tailwind  { background: #38bdf8; }
+.jquery    { background: #0769ad; }
+.laravel   { background: #ff2d20; }

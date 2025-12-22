@@ -91,15 +91,43 @@ if (profileImg) {
     });
 }
 
-// Previwiew project images in a modal
+// Preview project images in a modal
 const projectImages = document.querySelectorAll('.project-preview');
 const modal = document.getElementById('image-modal');
-const prev_modal = document.getElementById('preview-modal');
+const previewModal = document.getElementById('preview-modal');
+const closeBtn = document.getElementById('close-btn');
+
 projectImages.forEach(img => {
-    img.addEventListener('click', function() {
+    img.addEventListener('click', function(e) {
+        e.preventDefault();
         const src = this.src;
-        prev_modal.style.backgroundImage = `url(${src})`;
-        modal.style.display = 'flex';
+        previewModal.style.backgroundImage = `url(${src})`;
+        modal.classList.add('preview-modal');
     });
+});
+
+// Close modal on close button click
+if (closeBtn) {
+    closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        modal.classList.remove('preview-modal');
+        previewModal.style.backgroundImage = '';
+    });
+}
+
+// Close modal when clicking outside the image
+modal.addEventListener('click', function(e) {
+    if (e.target === this) {
+        this.classList.remove('preview-modal');
+        previewModal.style.backgroundImage = '';
+    }
+});
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('preview-modal')) {
+        modal.classList.remove('preview-modal');
+        previewModal.style.backgroundImage = '';
+    }
 });
 

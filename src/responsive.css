@@ -1,4 +1,52 @@
-@media (max-width: 800px){
+@media screen and (max-width: 1024px) and (min-width: 481px) {
+    section {
+        padding: 3rem 5% 8rem;
+    }
+    .home {
+        gap: 4rem;
+    }
+    .home-img {
+        width: 350px;
+        height: 350px;
+    }
+    .home-img img {
+        width: 350px;
+        height: 350px;
+    }
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+    .home-skeleton {
+        gap: 4rem;
+        padding: 3rem 5% 8rem;
+    }
+    .skeleton-img {
+        width: 350px;
+        height: 350px;
+    }
+    .project-item {
+        width: 48%;
+    }
+    .arsenal {
+        row-gap: 2.5rem;
+    }
+    .arsenal .lang-exp,
+    .arsenal .tech-skills,
+    .arsenal .framework-libs {
+        width: 48%;
+    }
+    .arsenal .framework-libs {
+        width: 48%;
+    }
+    #contact .wrapper {
+        width: 90%;
+        max-width: 600px;
+    }
+    form#contact-form {
+        width: 100%;
+        padding: 2rem 2.5rem;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -53,8 +101,20 @@
         align-items: center;
         justify-content: center;
         margin-top: 50px;
-        padding: 0;
-        gap: 1.5rem;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+    .home-skeleton {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        padding: 5rem 1rem 5rem;
+    }
+    .skeleton-content {
+        width: 100%;
+    }
+    .skeleton-img {
+        width: 280px !important;
+        height: 280px !important;
     }
     .home-img {
         margin-top: 0.4rem;
@@ -210,9 +270,11 @@
         height: 280px;
         width: 280px;
     }
-    form#contact-form{
-        height: 420px;
-        width: 400px;
+    form#contact-form {
+        height: auto;
+        width: 100%;
+        padding: 2rem 1rem;
+        max-width: 100%;
     }
     input,textarea{
         height: 45px;
