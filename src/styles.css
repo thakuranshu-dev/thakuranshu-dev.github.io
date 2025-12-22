@@ -7,6 +7,8 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
+    --webkit-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 :root {
@@ -559,12 +561,21 @@ progress::-ms-fill {
     transition: all 0.3s ease-in-out;
 }
 
-.arsenal .lang-exp .skills, .framework-libs .skills, .tech-skills .skills{
+.lang-exp .skills, .tech-skills .skills {
     width: 100%;
     height: 12px;
     border-radius: 20px;
     background-color: var(--bg-color);
     margin-bottom: 0.5rem;
+}
+
+/* Progress bar specific styling for tech-skills */
+.tech-skills progress {
+    width: 100%;
+    height: 12px;
+    margin-bottom: 0.5rem;
+    display: block !important;
+    opacity: 1 !important;
 }
 .lang-exp{
     animation: appear_translated-left linear;
@@ -999,7 +1010,7 @@ progress.sql-plsql::-moz-progress-bar {
 .desktop   { --color: #4682b4; }
 
 .framework-libs {
-    padding: 30px;
+    padding: 25px;
     font-family: "Segoe UI", sans-serif;
 }
 
@@ -1008,62 +1019,65 @@ progress.sql-plsql::-moz-progress-bar {
     margin-bottom: 25px;
 }
 
-.pie-wrapper {
+.pie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.pie {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background:
+        conic-gradient(var(--color) calc(var(--value) * 1%), #333333 0);
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 255, 238, 0.15);
+    transition: all 0.3s ease;
 }
 
-/* 🥧 Main Pie Chart */
-.pie-chart {
-    width: 260px;
-    height: 260px;
+.pie:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(0, 255, 238, 0.3);
+}
+
+.pie::before {
+    content: "";
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    background: var(--bg-color);
     border-radius: 50%;
-    background: conic-gradient(
-        #61dafb 0% 11.43%,     /* React */
-        #3c873a 11.43% 22.14%,/* Node */
-        #092e20 22.14% 33.57%,/* Django */
-        #000000 33.57% 47.14%,/* Flask */
-        #ff4b4b 47.14% 57.14%,/* Streamlit */
-        #7952b3 57.14% 69.29%,/* Bootstrap */
-        #38bdf8 69.29% 80.72%,/* Tailwind */
-        #0769ad 80.72% 90.72%,/* jQuery */
-        #ff2d20 90.72% 100%   /* Laravel */
-    );
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border: 2px solid rgba(0, 255, 238, 0.2);
 }
 
-/* 📌 Legend */
-.legend {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0.95rem;
+.pie span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    z-index: 1;
+    color: var(--text-color);
 }
 
-.legend li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+.pie p {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 1;
+    color: var(--muted-color);
 }
 
-.legend span {
-    width: 14px;
-    height: 14px;
-    border-radius: 3px;
-    display: inline-block;
-    margin-right: 10px;
-}
-
-/* 🎨 Legend Colors */
-.react     { background: #61dafb; }
-.nodejs    { background: #3c873a; }
-.django    { background: #092e20; }
-.flask     { background: #000000; }
-.streamlit { background: #ff4b4b; }
-.bootstrap { background: #7952b3; }
-.tailwind  { background: #38bdf8; }
-.jquery    { background: #0769ad; }
-.laravel   { background: #ff2d20; }
+/* 🌈 Framework Colors - Enhanced for Dark Theme */
+.react     { --color: #61dafb; }
+.nodejs    { --color: #68a063; }
+.django    { --color: #0c4b33; }
+.flask     { --color: #ff6600; }
+.streamlit { --color: #ff4b4b; }
+.bootstrap { --color: #9966ff; }
+.tailwind  { --color: #38bdf8; }
+.jquery    { --color: #0c72b4; }
+.laravel   { --color: #ff2d20; }
