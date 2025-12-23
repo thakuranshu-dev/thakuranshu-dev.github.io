@@ -45,7 +45,6 @@ body {
   background: #222;
   border-radius: 8px;
   margin-bottom: 1rem;
-  animation: skeleton-loading 1.2s infinite linear alternate;
 }
 
 .skeleton-title {
@@ -77,16 +76,6 @@ body {
   width: 460px;
   height: 460px;
   border-radius: 50%;
-}
-
-@keyframes skeleton-loading {
-  0% {
-    background-color: #222;
-  }
-
-  100% {
-    background-color: #333;
-  }
 }
 
 .header {
@@ -264,8 +253,7 @@ span:not(.bio-para) {
   font-size: 2.5rem;
   border-radius: 50%;
   margin: 3rem 1.5rem 3rem 0;
-  opacity: 0;
-  animation: appear_translated-left 1s ease forwards;
+  opacity: 1;
   transition: 0.3s ease-in-out;
 }
 
@@ -281,21 +269,6 @@ span:not(.bio-para) {
   height: 100%;
   background: var(--main-color);
   border-radius: 50%;
-}
-
-/* .social-icons a:nth-child(4) {
-  animation-delay: 0s;
-} */
-.social-icons a:nth-child(3) {
-  animation-delay: 0s;
-}
-
-.social-icons a:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.social-icons a:nth-child(1) {
-  animation-delay: 0.6s;
 }
 
 .btn {
@@ -335,7 +308,6 @@ span:not(.bio-para) {
   color: var(--main-color);
   border: 2px solid var(--main-color);
   box-shadow: 0 0 25px transparent;
-  animation: appear_translated-right2 1s ease;
 }
 
 .btn-group a:nth-of-type(2):hover {
@@ -345,7 +317,6 @@ span:not(.bio-para) {
 }
 
 .btn-group a:nth-of-type(1) {
-  animation: appear_translated-left 1s ease;
 }
 
 .text-animation {
@@ -361,7 +332,6 @@ span:not(.bio-para) {
 .text-animation span::before {
   content: "Android Developer";
   color: var(--main-color);
-  animation: words 20s infinite;
 }
 
 .text-animation span::after {
@@ -372,70 +342,6 @@ span:not(.bio-para) {
   height: 100%;
   border-left: 3px solid var(--bg-color);
   right: -8px;
-  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-}
-
-@keyframes cursor {
-  to {
-    border-left: 2px solid var(--main-color);
-  }
-
-}
-
-@keyframes words {
-
-  0%,
-  20% {
-    content: "Android Deeveloper";
-  }
-
-  21%,
-  40% {
-    content: "Fullstack Developer";
-  }
-
-  41%,
-  60% {
-    content: "Android Developer";
-  }
-
-  61%,
-  80% {
-    content: "Fullstack Developer";
-  }
-
-  81%,
-  100% {
-    content: "Android Developer";
-  }
-}
-
-@keyframes typing {
-
-  10%,
-  15%,
-  30%,
-  35%,
-  50%,
-  55%,
-  70%,
-  75%,
-  90%,
-  95% {
-    width: 0;
-  }
-
-  5%,
-  20%,
-  25%,
-  40%,
-  45%,
-  60%,
-  65%,
-  80%,
-  85% {
-    width: calc(100% + 8px);
-  }
 }
 
 .section-lbl {
@@ -523,15 +429,11 @@ span:not(.bio-para) {
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
-  animation: appear_translated-left linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 35%;
+  transition: 0.3s ease-in-out;
 }
 
 .timeline-item:nth-child(even) .timeline-content {
-  animation: appear_translated-right linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 35%;
+  transition: 0.3s ease-in-out;
 }
 
 .timeline-content:hover {
@@ -674,21 +576,12 @@ progress::-ms-fill {
 }
 
 .lang-exp {
-  animation: appear_translated-left linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 
 .tech-skills {
-  animation: appear_translated-right linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 
 .framework-libs {
-  animation: appear_translated-up linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 35%;
 }
 
 section #projects {
@@ -760,23 +653,14 @@ section #projects {
 
 .project-item:nth-child(1),
 .project-item:nth-child(4) {
-  animation: appear_translated-left linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 
 .project-item:nth-child(2),
 .project-item:nth-child(5) {
-  animation: appear_translated-up linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 
 .project-item:nth-child(3),
 .project-item:nth-child(6) {
-  animation: appear_translated-right linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 
 section#contact {
@@ -846,6 +730,7 @@ section#contact {
   justify-content: center;
   border-radius: 2rem;
   padding: 0.6rem;
+  position: relative;
 }
 
 .dock,
@@ -932,10 +817,7 @@ textarea {
   position: absolute;
   border-radius: 50%;
   transition: all 0.3s ease;
-  opacity: 0;
-  animation: animate_opacity ease forwards;
-  animation-timeline: view();
-  animation-range: entry -80% cover 5%;
+  opacity: 1;
 }
 
 .shape:first-child {

@@ -40,45 +40,6 @@ bioParagraphs.forEach((para, index) => {
 });
 bioParagraphs[randoomIndex].classList.add('show');
 
-// Animate progress bars when skill sections are visible
-function animateProgressBars(section) {
-  const progressBars = section.querySelectorAll('progress');
-  progressBars.forEach(bar => {
-    const target = parseInt(bar.getAttribute('value'), 10);
-    bar.value = 0;
-    let current = 0;
-    const step = Math.max(1, Math.floor(target / 60)); // ~1s animation
-    function updateBar() {
-      if (current < target) {
-        current += step;
-        if (current > target) current = target;
-        bar.value = current;
-        requestAnimationFrame(updateBar);
-      } else {
-        bar.value = target;
-      }
-    }
-    requestAnimationFrame(updateBar);
-  });
-}
-
-function handleSkillSectionAnimation(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-      animateProgressBars(entry.target);
-      entry.target.classList.add('animated');
-    }
-  });
-}
-
-const skillSections = document.querySelectorAll('.lang-exp, .tech-skills, .framework-libs');
-const observer = new IntersectionObserver(handleSkillSectionAnimation, {
-  threshold: 0.3
-});
-skillSections.forEach(section => {
-  observer.observe(section);
-});
-
 // Prevent downloading of #profile image
 const profileImg = document.getElementById('profile');
 if (profileImg) {
