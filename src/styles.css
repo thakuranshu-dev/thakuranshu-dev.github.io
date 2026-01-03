@@ -330,12 +330,12 @@ span:not(.bio-para) {
   position: relative;
 }
 
-.text-animation span::before {
+/* .text-animation span::before {
   content: "Android Developer";
   color: var(--main-color);
-}
+} */
 
-.text-animation span::after {
+/* .text-animation span::after {
   content: "";
   background-color: var(--bg-color);
   position: absolute;
@@ -343,7 +343,7 @@ span:not(.bio-para) {
   height: 100%;
   border-left: 3px solid var(--bg-color);
   right: -8px;
-}
+} */
 
 .section-lbl {
   font-size: 2rem;
