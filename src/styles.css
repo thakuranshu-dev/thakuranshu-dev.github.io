@@ -273,7 +273,7 @@ span:not(.bio-para) {
 
 .btn {
   display: inline-flex;
-  align-items: center;
+  align-items: center; justify-content: center;
   padding: 0.5rem 2rem;
   background: var(--main-color);
   box-shadow: 0 0 25px var(--main-color);
